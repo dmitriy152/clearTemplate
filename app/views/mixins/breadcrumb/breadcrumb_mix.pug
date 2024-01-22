@@ -1,0 +1,8 @@
+mixin breadcrumb_mix(arr)
+    .breadcrumb
+        .breadcrumb__wrapper.wrapper
+            ul.breadcrumb__list
+                each item, href in arr
+                    li.breadcrumb__item
+                        a.breadcrumb__link(href=href)
+                            span.breadcrumb__link-value=item

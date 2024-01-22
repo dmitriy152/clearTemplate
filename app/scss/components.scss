@@ -1,0 +1,16 @@
+//wrapper
+.container {
+	width: 100%;
+	overflow: hidden;
+}
+.wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	@include break(xx){
+		padding: 0 16px;
+	}
+}
+.wrapper-mounted {
+
+}
+//txt-components

@@ -1,0 +1,39 @@
+{
+  "name": "start-template-web",
+  "version": "1.0.0",
+  "description": "Базовый шаблон для верстки сайтов",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node generate.js"
+  },
+  "author": "EBoldarev",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.16.8",
+    "@babel/core": "^7.16.7",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "browser-sync": "^2.27.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-watch": "^5.0.1",
+    "gulp.spritesmith": "^6.12.1",
+    "sass": "^1.51.0"
+  },
+  "dependencies": {
+    "core-util-is": "^1.0.3",
+    "minimist": "^1.2.5",
+    "regenerator-runtime": "^0.13.11",
+    "resize-img": "^2.0.0",
+    "yargs": "^17.3.1"
+  }
+}
