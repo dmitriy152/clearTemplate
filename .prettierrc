@@ -1,0 +1,27 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "tabWidth": 2,
+        "useTabs": true
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "tabWidth": 2,
+        "useTabs": true
+      }
+    },
+    {
+      "files": "*.pug",
+      "options": {
+        "parser": "pug"
+      }
+    }
+  ]
+}

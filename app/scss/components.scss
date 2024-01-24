@@ -6,11 +6,10 @@
 .wrapper {
 	max-width: 1600px;
 	margin: 0 auto;
-	@include break(xx){
+	@include break(xx) {
 		padding: 0 16px;
 	}
 }
 .wrapper-mounted {
-
 }
 //txt-components
