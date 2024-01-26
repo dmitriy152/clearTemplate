@@ -29,6 +29,13 @@
       "options": {
         "parser": "pug"
       }
+    },
+    {
+      "files": "*.md",
+      "options": {
+        "tabWidth": 2,
+        "useTabs": true
+      }
     }
   ]
 }
