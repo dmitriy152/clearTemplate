@@ -1,9 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "es5",
-      "module": "commonjs",
-      "outDir": "dist",
-      "strict": false,
-      "esModuleInterop": true
-    }
+  "compilerOptions": {
+    "outDir": "./dev/js",
+    "rootDir": "./app/views/",
+    "target": "es5",
+    "module": "commonjs",
+    "strict": false,
+    "esModuleInterop": true
+  },
+  "include": [
+    "app/views/modules/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -52,8 +52,9 @@ function concatJs() {
 function buildTS() {
 	return tsProject.src()
 	  .pipe(tsProject())
-	  .js.pipe(concat("app.js"))
-		 .pipe(gulp.dest("./dev/js"));
+	  .js
+	  	.pipe(concat("app.js"))
+		.pipe(gulp.dest("./dev/js"));
 }
 
 //TODO Иногда отваливается и не собирает автоматически
