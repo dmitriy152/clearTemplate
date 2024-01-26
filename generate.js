@@ -19,6 +19,6 @@ fs.writeFileSync(`${modulePath + modName}/${modName}_mod.pug`, `${pugGen(modName
 fs.writeFileSync(`${modulePath + modName}/ts/${modName}_mod.ts`, '');
 fs.writeFileSync(`${modulePath + modName}/scss/${modName}_mod.scss`, `${scssGen(modName, wrapElem, elemClass)}`);
 
-console.log(`Модуль ${modName} успешно создан`);
+console.log('\x1b[36m%s\x1b[0m',`Модуль ${modName} успешно создан`);
 
 //node generate --class=box --wrap=wrap --elem=item
