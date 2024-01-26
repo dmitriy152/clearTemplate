@@ -1,5 +1,5 @@
 if (document.querySelector(".wrapper") && window.innerWidth > 768) {
-	const observer = new IntersectionObserver((entries, observer) => {
+	const observer: IntersectionObserver = new IntersectionObserver((entries, observer) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
 				// Если блок попал в область видимости, добавляем ему класс wrapper-mounted
