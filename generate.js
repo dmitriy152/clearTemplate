@@ -11,9 +11,6 @@ const dataNumber = argv.schema;
 
 const modulePath = './app/views/modules/';
 
-
-//console.log(pugGen(modName, wrapElem, elemClass));
-
 fs.mkdirSync(modulePath + modName);
 fs.mkdirSync(`${modulePath + modName}/js`);
 fs.mkdirSync(`${modulePath + modName}/scss`);
