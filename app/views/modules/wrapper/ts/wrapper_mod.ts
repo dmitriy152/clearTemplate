@@ -1,4 +1,4 @@
-if (document.querySelector(".wrapper") && window.innerWidth > 768) {
+if (document.querySelector(".wrapper") && window.innerWidth > 1200) {
 	const observer: IntersectionObserver = new IntersectionObserver((entries, observer) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
