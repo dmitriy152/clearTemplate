@@ -4,7 +4,7 @@ const argv = require('yargs').argv;
 const pugGen  = require('./core/module/pug');
 const scssGen = require('./core/module/scss');
 
-const modName = argv.class;
+const modName = argv.class;6
 const wrapElem = argv.wrap;
 const elemClass = argv.elem;
 const dataNumber = argv.schema;

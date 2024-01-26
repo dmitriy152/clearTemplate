@@ -1,5 +1,5 @@
 if (document.querySelector(".navlink")) {
-    let navLinkArr: HTMLAnchorElement[] = Array.from(document.querySelectorAll(".navlink")) as HTMLAnchorElement[];
+    let navLinkArr: HTMLAnchorElement[] = Array.from(document.querySelectorAll(".navlink"));
     let url: string = window.location.href;
     for (let i = 0; i < navLinkArr.length; i++) {
         if (navLinkArr[i].href === url) {
