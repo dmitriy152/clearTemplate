@@ -4,12 +4,13 @@ const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const autoprefixer = require("gulp-autoprefixer");
 const pug = require("gulp-pug");
-const spritesmith = require("gulp.spritesmith");
 const sourcemaps = require("gulp-sourcemaps");
 const imagemin = require("gulp-imagemin");
 const browserSync = require("browser-sync").create();
 const cleanCSS = require("gulp-clean-css");
 const mmq = require("gulp-merge-media-queries");
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
 
 function style() {
 	return gulp
@@ -48,20 +49,11 @@ function concatJs() {
 		.pipe(concat("app.js"))
 		.pipe(gulp.dest("./dev/js"));
 }
-
-function sprite() {
-	const spriteData = gulp.src("./app/img/sprite/*.*").pipe(
-		spritesmith({
-			imgName: "sprite.png",
-			cssName: "sprite.scss",
-			imgPath: "../img/sprite.png",
-		}),
-	);
-
-	spriteData.img.pipe(gulp.dest("./dev/img/")); // путь, куда сохраняем картинку
-	spriteData.css.pipe(gulp.dest("./app/scss/")); // путь, куда сохраняем стили
-
-	return spriteData;
+function buildTS() {
+	return tsProject.src()
+	  .pipe(tsProject())
+	  .js.pipe(concat("app.js"))
+		 .pipe(gulp.dest("./dev/js"));
 }
 
 //TODO Иногда отваливается и не собирает автоматически
@@ -97,17 +89,15 @@ function serve() {
 	gulp.watch("./app/img/**/*", imageMin).on("change", browserSync.reload);
 	gulp.watch("./app/js/**/*.js", concatJs).on("change", browserSync.reload);
 	gulp
-		.watch("./app/views/modules/**/*.js", concatJs)
+		.watch("./app/views/modules/**/*.ts", buildTS)
 		.on("change", browserSync.reload);
 	gulp.watch("./dev/*.html").on("change", browserSync.reload);
-	gulp.watch("./app/img/sprite/*.*", sprite).on("change", browserSync.reload);
 }
 
 function devStart() {
 	style();
 	html();
-	concatJs();
-	sprite();
+	buildTS();
 	serve();
 }
 
@@ -150,16 +140,9 @@ async function build() {
 
 exports.devStart = devStart;
 
-exports.style = style;
-exports.html = html;
 exports.imageMin = imageMin;
-
-exports.concatJs = concatJs;
-exports.sprite = sprite;
-exports.serve = serve;
-
 exports.build = build;
 exports.buildCss = buildCss;
 exports.buildHtml = buildHtml;
-exports.buildJs = buildJs;
+exports.buildTS = buildTS;
 exports.buildImg = buildImg;

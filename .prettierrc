@@ -11,6 +11,13 @@
       }
     },
     {
+      "files": "*.ts",
+      "options": {
+        "tabWidth": 2,
+        "useTabs": true
+      }
+    },
+    {
       "files": "*.scss",
       "options": {
         "tabWidth": 2,

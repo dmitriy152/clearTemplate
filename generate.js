@@ -12,11 +12,11 @@ const dataNumber = argv.schema;
 const modulePath = './app/views/modules/';
 
 fs.mkdirSync(modulePath + modName);
-fs.mkdirSync(`${modulePath + modName}/js`);
+fs.mkdirSync(`${modulePath + modName}/ts`);
 fs.mkdirSync(`${modulePath + modName}/scss`);
 
 fs.writeFileSync(`${modulePath + modName}/${modName}_mod.pug`, `${pugGen(modName, wrapElem, elemClass)}`);
-fs.writeFileSync(`${modulePath + modName}/js/${modName}_mod.js`, '');
+fs.writeFileSync(`${modulePath + modName}/ts/${modName}_mod.ts`, '');
 fs.writeFileSync(`${modulePath + modName}/scss/${modName}_mod.scss`, `${scssGen(modName, wrapElem, elemClass)}`);
 
 console.log(`Модуль ${modName} успешно создан`);
