@@ -88,9 +88,8 @@ function serve() {
 		.on("change", browserSync.reload);
 	gulp.watch("./app/views/**/*.pug", html).on("change", browserSync.reload);
 	gulp.watch("./app/img/**/*", imageMin).on("change", browserSync.reload);
-	gulp.watch("./app/js/**/*.js", concatJs).on("change", browserSync.reload);
 	gulp
-		.watch("./app/views/modules/**/*.ts", buildTS)
+		.watch("./app/views/**/*.ts", buildTS)
 		.on("change", browserSync.reload);
 	gulp.watch("./dev/*.html").on("change", browserSync.reload);
 }

@@ -7,9 +7,6 @@
     "strict": false,
     "esModuleInterop": true
   },
-  "include": [
-    "app/views/**/*"
-  ],
   "exclude": [
     "node_modules"
   ]
