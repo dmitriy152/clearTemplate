@@ -22,3 +22,4 @@ fs.writeFileSync(`${modulePath + modName}/scss/${modName}_mod.scss`, `${scssGen(
 console.log('\x1b[36m%s\x1b[35m%s\x1b[36m%s\x1b[0m', 'Модуль ', modName, ' успешно создан');
 
 //node generate --class=box --wrap=wrap --elem=item
+
